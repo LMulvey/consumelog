@@ -1,0 +1,26 @@
+generator client {
+	provider = "prisma-client-js"
+	output = "../generated/client"
+}
+
+datasource db {
+	provider = "postgresql"
+}
+
+enum ClogMediaType {
+	movie
+	video_game
+	book
+	tv_show
+}
+
+model Clog {
+	id        String   @id @default(cuid())
+	user_id      String   
+	media_type  ClogMediaType
+	foreign_id String?
+	blurb String
+	thoughts String
+	created_at DateTime @default(now())
+	updated_at DateTime @updatedAt
+}

@@ -1,0 +1,161 @@
+.page {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 48px 24px;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.headerRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.title {
+	font-size: 32px;
+	line-height: 1.2;
+}
+
+.linkButton {
+	display: inline-flex;
+}
+
+.errorBox {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 12px;
+	border: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+	border-radius: 12px;
+}
+
+.empty {
+	opacity: 0.8;
+}
+
+.llmSection {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 14px;
+	border: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+	border-radius: 12px;
+}
+
+.llmTitle {
+	font-size: 20px;
+	line-height: 1.2;
+}
+
+.llmForm {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.llmTextarea {
+	min-height: 90px;
+	padding: 10px;
+	font: inherit;
+	color: inherit;
+	background: transparent;
+	border: 1px solid color-mix(in srgb, var(--foreground) 25%, transparent);
+	border-radius: 10px;
+	resize: vertical;
+}
+
+.llmActions {
+	display: flex;
+	gap: 8px;
+}
+
+.llmError {
+	color: var(--destructive);
+	font-size: 14px;
+}
+
+.llmOutput {
+	min-height: 120px;
+	max-height: 280px;
+	padding: 10px;
+	margin: 0;
+	white-space: pre-wrap;
+	word-break: break-word;
+	overflow: auto;
+	border: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+	border-radius: 10px;
+}
+
+.itemList {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 0;
+	margin: 0;
+}
+
+.itemRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 14px;
+	border: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+	border-radius: 12px;
+}
+
+.itemName {
+	font-weight: 600;
+}
+
+.itemMeta {
+	font-size: 13px;
+	opacity: 0.75;
+	margin-top: 4px;
+}
+
+.skeletonBlock {
+	min-width: 240px;
+}
+
+.skeletonTitle,
+.skeletonMeta,
+.skeletonButton {
+	background: color-mix(in srgb, var(--foreground) 15%, transparent);
+	border-radius: 8px;
+	animation: pulse 1.2s ease-in-out infinite;
+}
+
+.skeletonTitle {
+	height: 16px;
+	width: 180px;
+	margin-bottom: 8px;
+}
+
+.skeletonMeta {
+	height: 12px;
+	width: 120px;
+}
+
+.skeletonButton {
+	height: 36px;
+	width: 84px;
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 0.9;
+	}
+}
